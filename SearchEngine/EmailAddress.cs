@@ -8,12 +8,12 @@ namespace SearchEngine
     public class EmailAddress
     {
         /// <summary>
-        /// 
+        /// Gets or sets the username of this instance.
         /// </summary>
         public string Username { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the domain of this instance.
         /// </summary>
         public string Domain { get; set; }
 
@@ -40,11 +40,11 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// Determines if an email address the user entered is valid
+        /// Determines if an email address string is valid.
         /// </summary>
-        /// <param name="address">The string representation of an email address</param>
-        /// <param name="username">The domain of the email address</param>
-        /// <param name="domain">The domain of the email address</param>
+        /// <param name="address">The string representation of an email address.</param>
+        /// <param name="username">The username of the email address.</param>
+        /// <param name="domain">The domain of the email address.</param>
         /// <returns>Returns true if the email address is valid. Otherwise, false.</returns>
         public static bool ParseEmail(string address, ref string username, ref string domain)
         {
@@ -58,9 +58,9 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Returns the string representation of the email address of this instance.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns the string representation of the email address of this instance.</returns>
         public override string ToString() => Username + '@' + Domain;
     }
 }

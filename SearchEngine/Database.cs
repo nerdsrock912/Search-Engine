@@ -39,7 +39,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// Adds a new <see cref="Humanoid"/> instance to this <see cref="Database"/> instance.
+        /// Adds a new <see cref="Humanoid"/> instance to this instance.
         /// </summary>
         public void AddHumanoid()
         {
@@ -58,7 +58,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// Searches for <see cref="Humanoid"/> instances using a specified search phrase.
+        /// Searches for <see cref="Humanoid"/> instances of this instance using a specified search phrase.
         /// </summary>
         public void SearchHumanoid()
         {
@@ -130,7 +130,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Sets a specified property of a <see cref="Humanoid"/> instance of this instance.
         /// </summary>
         public void ModifyHumanoid()
         {
@@ -185,7 +185,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Removes a specified <see cref="Humanoid"/> from this instance.
         /// </summary>
         public void DeleteHumanoid()
         {
@@ -211,7 +211,7 @@ namespace SearchEngine
         }
    
         /// <summary>
-        /// 
+        /// Shows all <see cref="Humanoid"/> instances in this instance.
         /// </summary>
         public void ShowHumanoids()
         {
@@ -231,9 +231,9 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Shows the properties of a <see cref="Humanoid"/> in this instance.
         /// </summary>
-        /// <param name="index"></param>
+        /// <param name="index">Index of <see cref="Humanoid"/> to display in this instance.</param>
         public void ShowHumanoidAt(int index)
         {
             Console.WriteLine("Name:".PadRight(8) + Humanoids[index].Name);
@@ -243,13 +243,13 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Get the number of <see cref="Humanoid"/> instances in this instance.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns the number of <see cref="Humanoid"/> instances in this instance.</returns>
         public int GetHumanoidCount() => Humanoids.Count;
 
         /// <summary>
-        /// 
+        /// Loads existing <see cref="Humanoid"/> instances from a file into this instance.
         /// </summary>
         public void LoadHumanoidData()
         {
@@ -279,6 +279,9 @@ namespace SearchEngine
             }
         }
 
+        /// <summary>
+        /// Writes all <see cref="Humanoid"/> instances of this instance to a file.
+        /// </summary>
         public void SaveDatabaseToFile()
         {
             try

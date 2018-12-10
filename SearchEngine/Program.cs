@@ -9,12 +9,13 @@ namespace SearchEngine
     public enum DatabaseChoice {ADD_HUMANOID = 1, MODIFY_HUMANOID, SHOW_HUMANOIDS, SHOW_HUMANOID_AT, SEARCH_HUMANOID, DEL_HUMANOID, QUIT}
 
     /// <summary>
-    /// 
+    /// This program demonstrates the usage of a <see cref="Database"/> instance and its ability to modify the <see cref="Humanoid"/> instance
+    /// contents of a processed file.
     /// </summary>
     public class Program
     {
         /// <summary>
-        /// 
+        /// Demonstrates the basic usage of a <see cref="Database"/> instance and the usage of a file for I/O.
         /// </summary>
         /// <param name="args"></param>
         public static void Main(string[] args)
@@ -47,7 +48,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Shows the menu of actions for modifying a <see cref="Database"/> instance.
         /// </summary>
         public static void ShowDatabaseMenu()
         {
@@ -63,10 +64,10 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Performs a specified action on a <see cref="Database"/> instance.
         /// </summary>
-        /// <param name="option"></param>
-        /// <param name="db"></param>
+        /// <param name="option">The number of the option of the <see cref="DatabaseChoice"/> enum to perform.</param>
+        /// <param name="db">A <see cref="Database"/> instance to perform actions on.</param>
         public static void PerformDatabaseOption(int option, Database db)
         {
             switch ((DatabaseChoice)option)

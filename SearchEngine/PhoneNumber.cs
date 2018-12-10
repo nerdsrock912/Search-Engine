@@ -8,7 +8,7 @@ namespace SearchEngine
     public class PhoneNumber
     {
         /// <summary>
-        /// 
+        /// Gets or sets the phone number of this instance.
         /// </summary>
         public string Number { get; set; }
 
@@ -22,10 +22,10 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Determines if a phone number string is valid.
         /// </summary>
-        /// <param name="number"></param>
-        /// <returns></returns>
+        /// <param name="number">The string of the phone number to be validated.</param>
+        /// <returns>Returns true if the phone number is valid. Otherwise, false.</returns>
         public static bool ParseNumber(string number) => new PhoneAttribute().IsValid(number);
     }
 }

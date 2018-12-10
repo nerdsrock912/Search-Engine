@@ -8,40 +8,40 @@ namespace SearchEngine
     public enum HumanoidProp { NAME = 1, AGE, EMAIL, PHONE }
 
     /// <summary>
-    /// 
+    /// The <see cref="Humanoid"/> class is designed to represent a human and its traits.
     /// </summary>
     public class Humanoid : IComparable<Humanoid>
     {
         /// <summary>
-        /// 
+        /// Gets or sets the identification of this instance.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the age of this instance.
         /// </summary>
         public ushort Age { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the email address of this instance.
         /// </summary>
         public EmailAddress Email { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the phone number of this instance.
         /// </summary>
         public PhoneNumber Phone { get; set; }
 
         /// <summary>
-        /// 
+        /// Initializes a new instance of the <see cref="Humanoid"/> class.
         /// </summary>
         public Humanoid() {}
 
         /// <summary>
-        /// 
+        /// Initializes a new instance of the <see cref="Humanoid"/> class using a specified name and age.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="age"></param>
+        /// <param name="name">The string representation of the identification of this instance.</param>
+        /// <param name="age">The age of this instance.</param>
         public Humanoid(string name, ushort age)
         {
             Name = name;
@@ -51,12 +51,12 @@ namespace SearchEngine
         }
         
         /// <summary>
-        /// 
+        /// Initializes a new instance of the <see cref="Humanoid"/> class using a specified name, age, email address, and phone number.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="age"></param>
-        /// <param name="email"></param>
-        /// <param name="phone"></param>
+        /// <param name="name">The name of the instance.</param>
+        /// <param name="age">The age of the instance.</param>
+        /// <param name="email">The email address of the instance.</param>
+        /// <param name="phone">The phone number of the instance.</param>
         public Humanoid(string name, ushort age, string email, string phone)
         {
             Name = name;
@@ -66,7 +66,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Sets the name of this instance.
         /// </summary>
         public void SetName()
         {
@@ -75,7 +75,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Sets the age of this instance.
         /// </summary>
         public void SetAge()
         {
@@ -91,7 +91,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Sets the email address of this instance.
         /// </summary>
         public void SetEmail()
         {
@@ -115,7 +115,7 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Sets the phone number of this instance.
         /// </summary>
         public void SetPhone()
         {
@@ -138,10 +138,10 @@ namespace SearchEngine
         }
 
         /// <summary>
-        /// 
+        /// Determines the equality of the <see cref="Name"/> property of two <see cref="Humanoid"/> instances.
         /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
+        /// <param name="other">The <see cref="Humanoid"/> instance being compared to this instance.</param>
+        /// <returns>Returns 0 if equal or a nonzero number otherwise.</returns>
         public int CompareTo(Humanoid other)
         {
             return Name.CompareTo(other.Name);
